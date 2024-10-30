@@ -25,14 +25,14 @@ namespace Testplatformunew
         public void AddStudent(string name, string surname, string email, string password)
         {
             students.Add(new Student { Name = name, Surname = surname, Email = email, Password = password });
-            Console.WriteLine("Yeni öğrenci eklendi: " + name + " " + surname);
+            Console.WriteLine("New student added" + name + " " + surname);
         }
 
 
         public void AddCategory(string categoryName)
         {
             categories.Add(new Category { Id = categories.Count + 1, CategoryName = categoryName });
-            Console.WriteLine("Yeni kategori eklendi: " + categoryName);
+            Console.WriteLine("New category added " + categoryName);
         }
 
 
@@ -41,7 +41,7 @@ namespace Testplatformunew
             int randomIndex = random.Next(categories.Count);
             string randomCategory = categories[randomIndex].CategoryName;
             questions.Add(new Question { Text = text, Category = randomCategory, CorrectAnswer = correctAnswer });
-            Console.WriteLine($"Yeni soru eklendi: {text} (Kategori: {randomCategory})");
+            Console.WriteLine($"New question was added: {text} (Category: {randomCategory})");
         }
 
 
@@ -58,7 +58,7 @@ namespace Testplatformunew
 
         public void ShowExamResult(int score)
         {
-            Console.WriteLine($"Sınav Sonucu: {score} / {questions.Count} doğru cevap");
+            Console.WriteLine($"Exam result: {score} / {questions.Count} doğru cevap");
         }
 
 
